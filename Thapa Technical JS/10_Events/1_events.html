@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: aquamarine;
+        }
+
+        .event1
+        {
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <p id="myid1">My name is Mayur Ankush Rasal Im from Paragon but currently staying in sangamner
+        im persuing computer Engineering at Amrutvahini College Of Engineering Sangamner, I Have Completed my 10th and 12th from Hande-Deshmukh 
+        Hitech school and junior College Alephata I have an aggregate of 70% throughout my 6 semester of Engineering.
+        Along with my Degree Im familiar with c,cpp, Data structures, DBMS, SQl, HTML and CSS.
+    </p>
+
+    <!-- 1. first way writing event -->
+    <button class="event1" onclick="alert('I am Awesome but No one use Me')"> Click ME Please</button>
+
+    <p class="mayur1">
+        I Have Completed my 10th and 12th from Hande-Deshmukh 
+        Hitech school and junior College Alephata I have an aggregate of 70% throughout my 6 semester of Engineering.
+        Along with my Degree Im familiar with c,cpp, Data structures, DBMS, SQl, HTML and CSS.
+    </p>
+
+
+    <p class="mayur2">
+        I Have Completed my 10th and 12th from Hande-Deshmukh 
+        Hitech school and junior College Alephata I have an aggregate of 70% throughout my 6 semester of Engineering.
+        Along with my Degree Im familiar with c,cpp, Data structures, DBMS, SQl, HTML and CSS.
+    </p>
+
+    <p class="mayur3">When defining an event handler as an HTML attribute, the attribute
+        value should be a string of JavaScript code. That code should be the
+        body of the event handler function, not a complete function declaration.
+        That is, your HTML event handler code should not be surrounded by
+        curly braces and prefixed with the function keyword.</p>
+
+    <p id="myid2">
+        The event argument means that your handler code can refer to the
+        current event object as event. The with statements mean that the
+        code of your handler can refer to the properties of the target object, the
+        containing <form> (if any), and the containing Document object
+        directly, as if they were variables in scope. The with statement is
+        forbidden in strict mode (§5.6.3), but JavaScript code in HTML
+        attributes is never strict. Event handlers defined in this way are
+        executed in an environment in which unexpected variables are defined.
+        This can be a source of confusing bugs and is a good reason to avoid
+        writing event handlers in HTML.
+    </p>
+
+    <a href="" class="myname" onclick="callingFunction()">My Name is Mayur Rasal</a>
+    <br>
+    <a href="" id="myname11">I Am from Pargaon Tal-Junnar, Dist-Pune</a>
+    <br>
+    <a href="" id="myname12">But currently staying in Sangamner</a>
+
+
+    <script>
+        //2. second way of writing event  (by calling function)
+         const callingFunction = () =>
+         {
+            alert("(By Calling Function) most Comman way of writing the function");
+         }
+
+         //3. third way of writing event (using inline event)
+         var data= document.getElementById("myname11");
+
+         data.onclick = function()
+         {
+            console.log("It is again most common way of writing the function");
+         }
+
+         //here only one action will taken out the alert OR console.log those who are at second position here alert is at second
+
+         data.onclick = function()
+         {
+            alert("(using inline event) It is again most common way of writing the function");
+         }
+
+         //4. fourth way of writing the event (addEventListner)
+
+         var data1 = document.querySelector('#myname12'); 
+         data1.addEventListener('click',()=>
+         {
+            alert('(addEventListner) i love this way of writing the functions');
+         })
+
+         //here both actions will taken out the alert and console.log
+
+         data1.addEventListener('click',()=>
+         {
+            console.log('i love this way of writing the functions');
+         })
+
+
+         const fourhtway = document.getElementById("myname12");
+
+         //for checking the event information
+         const checkEvent = () =>
+         {
+            alert('Hum dekh rahe hain event Object');
+            console.log(event);                             //mouseEvent or pointerEvent i.e type and their properties  
+            console.log(event.target);                    //it shows the html part of that event i.e Achor tag text
+            console.log(event.type);                     //shows type of event on console
+         }
+         fourhtway.addEventListener('click', checkEvent);
+
+    </script>
+</body>
+</html>

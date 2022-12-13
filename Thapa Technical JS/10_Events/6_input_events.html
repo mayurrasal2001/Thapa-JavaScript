@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <label for="">write your Name: </label>
+            <input type="text" id="ice">
+            <br>
+            <label for="">Choose ice-cream Flavor
+                <select name="ice-cream" id="ice-cream" onchange="selectElement()">
+                    <option value="">Select One...</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="vanila">Vanila</option>
+                    <option value="strawberry">Strawberry</option>
+                </select>
+            </label>
+            <br>
+            <br>
+            <div id="result"></div>
+        </div>
+    </div>
+    <script>
+
+        //by using simple fat arrow function
+        const selectElement = () =>
+        {
+            const inputChange = document.getElementById("ice").value;
+            const icecream = document.getElementById("ice-cream").value;
+            const result = document.getElementById("result");
+
+            result.innerHTML = `Mr. ${inputChange} select the ${icecream} ice-cream flavor`;
+
+        }
+
+        ////By using addEventListner
+        // var change = document.getElementById("ice-cream");
+        // change.addEventListener("click",() =>
+        // {
+        //     const inputChange = document.getElementById("ice").value;
+        //     const icecream = document.getElementById("ice-cream").value;
+        //     const result = document.getElementById("result");
+
+        //     result.innerHTML = `Mr. ${inputChange} select the ${icecream} ice-cream flavor`;
+        // });
+    </script>
+</body>
+</html>

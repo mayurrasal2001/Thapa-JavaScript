@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: aquamarine;
+        }
+
+        .event1
+        {
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <p id="myid2">
+        The event argument means that your handler code can refer to the
+        current event object as event. The with statements mean that the
+        code of your handler can refer to the properties of the target object, the
+        containing <form> (if any), and the containing Document object
+        directly, as if they were variables in scope. The with statement is
+        forbidden in strict mode (§5.6.3), but JavaScript code in HTML
+        attributes is never strict. Event handlers defined in this way are
+        executed in an environment in which unexpected variables are defined.
+        This can be a source of confusing bugs and is a good reason to avoid
+        writing event handlers in HTML.
+    </p>
+
+    <a href="" id="myname12">But currently staying in Sangamner</a>
+
+
+    <script>
+
+         const fourhtway = document.getElementById("myname12");
+
+         //for checking the event information
+         const checkEvent = () =>
+         {
+            alert('Hum dekh rahe hain event Object');
+            console.log(event);                             //mouseEvent or pointerEvent i.e type and their properties  
+            console.log(event.target);                    //it shows the html part of that event i.e Achor tag text
+            console.log(event.type);                     //shows type of event on console
+         }
+         fourhtway.addEventListener('click', checkEvent);
+
+    </script>
+</body>
+</html>

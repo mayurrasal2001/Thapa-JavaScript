@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myP">My name is Mayur Ankush Rasal Im from Paragon but currently staying in sangamner
+        im persuing computer Engineering at Amrutvahini College Of Engineering Sangamner, I Have Completed my 10th and 12th from Hande-Deshmukh 
+        Hitech school and junior College Alephata I have an aggregate of 70% throughout my 6 semester of Engineering.
+        Along with my Degree Im familiar with c,cpp, Data structures, DBMS, SQl, HTML and CSS.
+    </p>
+
+    <button onclick="changeContent()"> Click ME Please</button>
+
+    <p class="mayur">
+        I Have Completed my 10th and 12th from Hande-Deshmukh 
+        Hitech school and junior College Alephata I have an aggregate of 70% throughout my 6 semester of Engineering.
+        Along with my Degree Im familiar with c,cpp, Data structures, DBMS, SQl, HTML and CSS.
+    </p>
+
+
+    <p class="mayur1">
+        I Have Completed my 10th and 12th from Hande-Deshmukh 
+        Hitech school and junior College Alephata I have an aggregate of 70% throughout my 6 semester of Engineering.
+        Along with my Degree Im familiar with c,cpp, Data structures, DBMS, SQl, HTML and CSS.
+    </p>
+
+    <p class="mayur2">When defining an event handler as an HTML attribute, the attribute
+        value should be a string of JavaScript code. That code should be the
+        body of the event handler function, not a complete function declaration.
+        That is, your HTML event handler code should not be surrounded by
+        curly braces and prefixed with the function keyword.</p>
+
+    <p id="myid">
+        The event argument means that your handler code can refer to the
+        current event object as event. The with statements mean that the
+        code of your handler can refer to the properties of the target object, the
+        containing <form> (if any), and the containing Document object
+        directly, as if they were variables in scope. The with statement is
+        forbidden in strict mode (§5.6.3), but JavaScript code in HTML
+        attributes is never strict. Event handlers defined in this way are
+        executed in an environment in which unexpected variables are defined.
+        This can be a source of confusing bugs and is a good reason to avoid
+        writing event handlers in HTML.
+    </p>
+
+    <a href="" class="myname">My Name is Mayur Rasal</a>
+
+
+    <script>
+        //how to change the html styles i.e color by using the javascript
+        document.querySelector(".mayur").style.color = "violet";
+        document.querySelector("#myP").style.color = "blue";
+        document.getElementsByClassName("mayur1")[0].style.color="red";
+        document.getElementById("myid").style.color = "green";
+
+
+        //change content by using the onclickevent
+        const changeContent = () =>
+        {
+            var changetext = document.getElementById("myP");
+            changetext.innerHTML="Thank You MAYUR RASAL SIR thank you for your introduction !";
+
+            //without using refrence
+            // document.getElementById("myP").innerHTML="Thank You MAYUR RASAL SIR thank you for your introduction !";
+        }
+        
+
+        //for how many times we use the class and tags it will print on console
+        console.log(document.getElementsByClassName("mayur"));
+
+        console.log(document.getElementsByTagName("p"));
+
+        //querySelector() and querySelectorAll()
+        document.querySelector(".mayur2" ).style.color = "brown";
+
+        //querySelectorAll() it will returns only how many classes,id or tagnames
+        console.log(document.querySelectorAll(".mayur"));
+
+    </script>
+</body>
+</html>

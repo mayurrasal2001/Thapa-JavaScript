@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent-div
+        {
+            display: grid;
+            background-color: aqua;
+            width: 50vw;
+            height: 50vh ;
+            place-items: center;
+
+        }
+
+        .child-div
+        {
+            background-color: brown;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent-div" id="parentID">
+        <div class="child-div" id="childID">
+
+        </div>
+    </div>
+
+    <script>
+        const parent = document.getElementById("parentID");
+        const child = document.getElementById("childID");
+
+        const parentClick = () =>
+        {
+            alert("Call to Parent");
+            // event.stopPropagation();                    //for stop the propogation on that place only
+        }
+
+        const childClick = () =>
+        {
+            alert("Call to child");
+        }
+
+        //it is Event capturing propogation
+        parent.addEventListener('click', parentClick, true);     //by default 3 parameter is false
+        child.addEventListener('click', childClick, true);
+
+        // //it is Event Bubbling propogation
+        // parent.addEventListener('click', parentClick, false);     //by default 3 parameter is false
+        // child.addEventListener('click', childClick, false);
+    </script>
+</body>
+</html>
